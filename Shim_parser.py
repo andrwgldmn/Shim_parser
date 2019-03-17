@@ -21,7 +21,7 @@ def shimparser_inet():
             text = r.text
             pat = r"""cannot\s*locate\s*symbol\s*"(.+?)"\s*referenced\s*"""
             for symbol in re.findall(pat, text):
-                part_one = "#include <stdint.h>\n\nvoid "
+                part_one = "#include <stdint.h>\nvoid "
                 part_two = "{}".format(symbol)
                 part_three = "(){}\n"
                 shim = (part_one + part_two + part_three)
@@ -43,7 +43,7 @@ def shimparser_local():
             text = input_file.read()
             pat = r"""cannot\s*locate\s*symbol\s*"(.+?)"\s*referenced\s*"""
             for symbol in re.findall(pat, text):
-                part_one = "#include <stdint.h>\n\nvoid "
+                part_one = "#include <stdint.h>\nvoid "
                 part_two = "{}".format(symbol)
                 part_three = "(){}\n"
                 shim = (part_one + part_two + part_three)
@@ -59,8 +59,6 @@ def shimparser_local():
         for j in str_list:
             File.write(j)
         os.system('cls' if os.name == 'nt' else 'clear') 
-
-help()
 
 while value != 0:
     help()
