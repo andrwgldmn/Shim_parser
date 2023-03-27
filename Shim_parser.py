@@ -9,8 +9,6 @@ value = None
 def help():
         print (' ----------------------------')
         print ('\n Eng:\n Put near this script your log.txt to work with 1 item, copy a link of your logcat from Web to work with 2 item. \n')
-        print (' \n Рус: Положите рядом со скриптом ваш log.txt с 1 пунктом, скопируйте ссылку на ваш логкат из сети для работы с 2 пунктом. \n ')
-        print (' \n Укр: Покладіть біля цього скрипта ваш log.txt для роботи з 1 пунктом, скопіюйте ссилку на ваш  логкат з мережі для роботи з 2 пунктом. \n ')
         print (' \n Made by andrwgldmn \n') 
         print (' ----------------------------')
 
@@ -63,8 +61,8 @@ def shimparser_local():
 while value != 0:
     help()
     print (' ----------------------------')
-    value = int(input(" 1) English \n 2) Русский \n 3) Українська \n ---------------------------- \n "))
-    if (value != 1 and value != 2 and value != 3 ):
+    value = int(input(" 1) English \n ---------------------------- \n "))
+    if (value != 1):
         print ("\n Program has been terminated. \n" )
     if (value == 1):
         while value != 0:
@@ -74,33 +72,6 @@ while value != 0:
             if (value == 0):
                 print('-' * 28 + '\n Thanks!\n' + '-' * 28)
 
-            elif (value == 1):
-                shimparser_local()
-
-            elif (value == 2 ):
-                shimparser_inet()
-
-    if (value == 2):
-        while value != 0:
-            print (' ----------------------------')
-            value = int(input(" Выберите категорию: \n \n 0) Выход \n 1) Анализ локального log.txt для получения шимок \n 2) Анализ log.txt для получения шимок через Internet (log.txt будет скачан по ссылке, которую Вы введёте. URL) \n   ---------------------------- \n "))
-            
-            if (value == 0):
-                print('-' * 28 + '\n Спасибо!\n' + '-' * 28)
-
-            elif (value == 1):
-                shimparser_local()
-
-            elif (value == 2 ):
-                shimparser_inet()
-
-    if (value == 3):
-        while value != 0:
-            print (' ----------------------------')
-            value = int(input(" Оберіть категорію: \n \n 0) Вихід \n 1) Аналіз локального log.txt для отримання шимок \n 2) Аналіз log.txt для отримання шимок через Internet (log.txt буде завантажений з URL, яку Ви введете) \n  ---------------------------- \n "))
-            
-            if (value == 0):
-                print('-' * 28 + '\n Дякую!\n' + '-' * 28)
             elif (value == 1):
                 shimparser_local()
 
